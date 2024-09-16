@@ -249,7 +249,11 @@ The implementation of the AWS Data Analytic Platform for the City of Vancouver p
 
 ### Author
 **Lam Thi Thu Thao**
+
 University Canada West
+
 Course: BUSI 653 – Cloud Computing Technologies
+
 Instructor: Prof. Mahmood Mortazavi Dehkordi
-Date: August 16, 2024
+
+Date: September 16, 2024
