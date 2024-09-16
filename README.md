@@ -11,11 +11,12 @@ Project 1:
 
 Project 2: AWS Data Analytic Platform for the City of Vancouver
 
-## Project Title:
-AWS Data Analytic Platform for Lost and Found Animal Data
+## Project Title: AWS Data Analytic Platform for Lost and Found Animal Data
 
 ## Objective:
 The primary goal of this project is to implement a Data Analytic Platform (DAP) for the City of Vancouver using AWS services. The platform will manage and analyze Lost and Found Animal data for the years 2023 and 2024. By using AWS tools, we aim to optimize data storage, cleansing, analysis, and visualization, ensuring accurate and actionable insights for stakeholders.
+
+<img width="873" alt="Screen Shot 2024-09-16 at 11 08 37" src="https://github.com/user-attachments/assets/d01e5b41-7bc4-4f9a-8b96-7f6b26ad1ee3">
 
 ## Dataset:
 The dataset used in this project includes:
