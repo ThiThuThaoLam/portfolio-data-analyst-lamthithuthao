@@ -45,6 +45,7 @@ The platform is built on various AWS services to achieve its objectives. Below a
 
 ### Project Structure and Workflow:
 1. **Data Ingestion with AWS S3**:
+
 The raw data related to student accommodation services is ingested into AWS S3. Different folders such as Accessibility Services, Student Demographics, and Student Records and Complaints are created within the S3 bucket to store the respective data.
 
 **Bucket Name**: academic-accommodations-accessibility-lamthithuthao
@@ -69,7 +70,7 @@ The data ingested into S3 is cleaned and structured using AWS Glue. This include
 - Remove duplicates and handle missing values.
 - Aggregate data where necessary.
 
-<img width="1440" alt="ETL" src="https://github.com/user-attachments/assets/be090af9-bbf3-4a30-87da-1d7a9b2fd789">
+<img width="1440" alt="Class Participation #3 - Lam Thi Thu Thao" src="https://github.com/user-attachments/assets/c0e5f1ae-af50-4cee-b258-2e68299c552a">
 
 
 3. **Data Analysis with Amazon Athena**:
@@ -173,7 +174,7 @@ The dataset used in this project includes:
 
 <img width="1440" alt="Lost Found Animal  - Landing Folders - 2024" src="https://github.com/user-attachments/assets/42d2d592-881e-4c7e-ab0c-ec03c20bc685">
 
-<img width="1440" alt="Created Job - Data Cleaning" src="https://github.com/user-attachments/assets/54b5ae38-cdb1-4ff7-9a1f-f2e2e8b22241">
+<img width="1440" alt="Curated - Reports" src="https://github.com/user-attachments/assets/f77d248e-73c0-419e-9c7a-5e5d08be7489">
 
 
 4. **Data Preparation**: Once data is collected, it is prepared by ensuring consistency and compatibility. This step involves formatting, cleaning, and structuring datasets to match the required standards. Tasks:
@@ -184,11 +185,11 @@ The dataset used in this project includes:
 
 6. **Data Cleaning**: We use AWS Glue DataBrew to identify and remove duplicates, handle missing values, correct data types, and standardize formats. This ensures the data is free from errors and inconsistencies.
 
-<img width="1440" alt="Data Cleaning" src="https://github.com/user-attachments/assets/db52f69f-80ee-4af1-8bd5-d2d3bc801f42">
+<img width="1440" alt="Data Structuring" src="https://github.com/user-attachments/assets/68bd7b88-f4a6-473c-9e4a-59817e82e906">
 
 7. **Data Structuring**: After cleaning, the Data Structuring phase organizes the data into a clear schema, renaming columns for clarity, reordering them logically, and ensuring consistency across datasets (e.g., Lost Animal Reports for 2023 and 2024). The structured data is stored in AWS S3’s Curated Zone and validated with AWS Glue, ready for analysis using tools like Amazon Athena. This preparation ensures the data is accurate, reliable, and efficiently organized for downstream processing.
 
-<img width="1440" alt="Data Structuring" src="https://github.com/user-attachments/assets/68bd7b88-f4a6-473c-9e4a-59817e82e906">
+<img width="1440" alt="Data Structuring" src="https://github.com/user-attachments/assets/1d81dd2e-f7d1-4899-a365-3f8f3c85ba7f">
 
 8. **Data Analysis**: Data analysis is done using Amazon Athena, where SQL queries are executed to extract insights.
 
@@ -203,17 +204,19 @@ The dataset used in this project includes:
 <img width="1440" alt="Amazon Athena" src="https://github.com/user-attachments/assets/083e6fbc-733b-4e5a-9cd5-ff82047f4ef3">
 
 9. **Data Visualization**: The final analysis results are visualized using Google Sheets for clarity and ease of communication. Bar charts and other visual representations are created based on the analysis. The data visualizations are exported as PDF reports and shared with stakeholders.
-  
+
+<img width="1440" alt="Screen Shot 2024-08-25 at 07 38 52" src="https://github.com/user-attachments/assets/0b7b8a7b-ac35-4cb3-906a-b804ee53b008">
+
 10. **Data Publishing**: The processed datasets and visualization reports are published using AWS EC2, allowing external stakeholders to access the reports securely. The EC2 instances were created to host the files and reports, making them accessible via public IPs.
 
 <img width="1440" alt="Screen Shot 2024-08-25 at 08 27 19" src="https://github.com/user-attachments/assets/952753a1-937f-4f50-9897-721d3b4bd8e3">
 
-13. **Data Governance and Security**: Ensuring the security and governance of data is critical. AWS KMS (Key Management Service) is used to encrypt datasets, and S3 bucket permissions are tightly controlled to prevent unauthorized access.
-- SSE-KMS encryption is applied to sensitive data.
+11. **Data Governance and Security**: Ensuring the security and governance of data is critical. AWS KMS (Key Management Service) is used to encrypt datasets, and S3 bucket permissions are tightly controlled to prevent unauthorized access.
+- **SSE-KMS encryption** is applied to sensitive data.
 
 <img width="1440" alt="KMS - Key" src="https://github.com/user-attachments/assets/7d6423c2-e6af-45cf-8f41-cde320503cf2">
 
-- Replication rules and bucket versioning are used for backup and disaster recovery.
+- **Replication rules and bucket versioning** are used for backup and disaster recovery.
 
 <img width="1440" alt="Replication rules " src="https://github.com/user-attachments/assets/aef1af14-1638-4f68-b3a7-a541a5c42330">
 
