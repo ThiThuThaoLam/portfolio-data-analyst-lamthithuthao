@@ -44,7 +44,7 @@ The platform is built on various AWS services to achieve its objectives. Below a
 9. **AWS KMS**: For encrypting sensitive data to ensure security and compliance.
 
 ### Project Structure and Workflow:
-1. **Data Ingestion with AWS S3**:
+1.**Data Ingestion with AWS S3**:
 
 The raw data related to student accommodation services is ingested into AWS S3. Different folders such as Accessibility Services, Student Demographics, and Student Records and Complaints are created within the S3 bucket to store the respective data.
 
@@ -61,7 +61,7 @@ The raw data related to student accommodation services is ingested into AWS S3. 
 <img width="1440" alt="AWS S3" src="https://github.com/user-attachments/assets/3f4031ae-ec8b-41d5-b1e8-c644c07f2333">
 
 
-2. **Data Cleaning using AWS Glue**:
+2.**Data Cleaning using AWS Glue**:
 The data ingested into S3 is cleaned and structured using AWS Glue. This includes renaming columns for clarity and performing data transformations. Glue’s data cleaning capabilities help ensure that the data is formatted and prepared for analysis.
 
 **AWS Glue Job**: academic-accommodation-cleaning-lamthithuthao
@@ -73,7 +73,7 @@ The data ingested into S3 is cleaned and structured using AWS Glue. This include
 <img width="1440" alt="Class Participation #3 - Lam Thi Thu Thao" src="https://github.com/user-attachments/assets/c0e5f1ae-af50-4cee-b258-2e68299c552a">
 
 
-3. **Data Analysis with Amazon Athena**:
+3.**Data Analysis with Amazon Athena**:
 Amazon Athena is used to query the cleaned data and perform analysis on student demographics and academic accommodations. The results from these queries are used to provide insights into student support services.
 
 **Database**: academic_accommodation_database
@@ -87,7 +87,7 @@ Amazon Athena is used to query the cleaned data and perform analysis on student 
 <img width="1440" alt="Athena " src="https://github.com/user-attachments/assets/b4f402c7-e53a-4023-8ee5-71408fa16084">
 
 
-4. **Infrastructure with AWS VPC and EC2**:
+4.**Infrastructure with AWS VPC and EC2**:
 The platform leverages AWS VPC for secure networking and AWS EC2 instances to host web servers and general-purpose servers. This ensures the processed data can be published and shared securely across the network.
 
 - **VPC Name**: Aca_Acommo_VPC_TT_Thao-vpc.
@@ -107,7 +107,7 @@ The platform leverages AWS VPC for secure networking and AWS EC2 instances to ho
 <img width="1440" alt="EC2_General Server" src="https://github.com/user-attachments/assets/7ca8486e-ea98-499d-9df6-2c7fee3c38ff">
 
 
-5. **Data Replication with AWS S3**:
+5.**Data Replication with AWS S3**:
 Data replication is enabled to ensure high availability and fault tolerance. The replication configuration copies objects between S3 buckets in the same or different AWS regions.
 
 **Source Bucket**: academic-accommodations-accessibility-lamthithuthao
@@ -160,15 +160,15 @@ The dataset used in this project includes:
 - **Lost Animal Reporting Rate (APR) Dataset**: This dataset calculates the Annual Percentage Rate (APR) of lost animals reported in the City of Vancouver. The APR dataset is used to analyze trends and provide insights on how the rate of lost animals changes over time.
 
 ### Methodology and Project Phases:
-1. **Data Analytical Question Formulation**: The first step in the methodology was to formulate four key types of analytical questions:
+1.**Data Analytical Question Formulation**: The first step in the methodology was to formulate four key types of analytical questions:
 - **Descriptive Analysis**: How many lost animal reports were submitted in 2023 and 2024?
 - **Diagnostic Analysis**: What factors caused a spike in the number of lost animal reports?
 - **Predictive Analysis**: How is the number of lost animal reports expected to change by the end of 2024?
 - **Prescriptive Analysis**: What actions should the City of Vancouver take to reduce the number of lost animal reports?
   
-2. **Data Discovery**: Identified and gathered relevant datasets for the Lost and Found Animal information for 2023 and 2024. In this step, we located the necessary datasets related to lost animals, staff activities, and internal reports of Vancouver Animal Control.
+2.**Data Discovery**: Identified and gathered relevant datasets for the Lost and Found Animal information for 2023 and 2024. In this step, we located the necessary datasets related to lost animals, staff activities, and internal reports of Vancouver Animal Control.
 
-3. **Data Storage Design**: We design an effective and scalable storage solution using AWS S3. The structure consists of clearly organized folders for raw and processed data. Bucket Structure:
+3.**Data Storage Design**: We design an effective and scalable storage solution using AWS S3. The structure consists of clearly organized folders for raw and processed data. Bucket Structure:
 - **Landing Zone**: Raw data for 2023 and 2024.
 - **Curated Zone**: Cleaned and processed data ready for analysis.
 
@@ -177,21 +177,21 @@ The dataset used in this project includes:
 <img width="1440" alt="Curated - Reports" src="https://github.com/user-attachments/assets/f77d248e-73c0-419e-9c7a-5e5d08be7489">
 
 
-4. **Data Preparation**: Once data is collected, it is prepared by ensuring consistency and compatibility. This step involves formatting, cleaning, and structuring datasets to match the required standards. Tasks:
+4.**Data Preparation**: Once data is collected, it is prepared by ensuring consistency and compatibility. This step involves formatting, cleaning, and structuring datasets to match the required standards. Tasks:
 - Converting raw datasets into CSV format.
 - Ensuring all fields are uniform and correct (e.g., AnimalID, ReportDate, AnimalName, etc.).
   
-5. **Data Ingestion**: Uploaded the prepared data to designated S3 buckets (Landing/2023 and Landing/2024 folders).
+5.**Data Ingestion**: Uploaded the prepared data to designated S3 buckets (Landing/2023 and Landing/2024 folders).
 
-6. **Data Cleaning**: We use AWS Glue DataBrew to identify and remove duplicates, handle missing values, correct data types, and standardize formats. This ensures the data is free from errors and inconsistencies.
+6.**Data Cleaning**: We use AWS Glue DataBrew to identify and remove duplicates, handle missing values, correct data types, and standardize formats. This ensures the data is free from errors and inconsistencies.
 
 <img width="1440" alt="Data Structuring" src="https://github.com/user-attachments/assets/68bd7b88-f4a6-473c-9e4a-59817e82e906">
 
-7. **Data Structuring**: After cleaning, the Data Structuring phase organizes the data into a clear schema, renaming columns for clarity, reordering them logically, and ensuring consistency across datasets (e.g., Lost Animal Reports for 2023 and 2024). The structured data is stored in AWS S3’s Curated Zone and validated with AWS Glue, ready for analysis using tools like Amazon Athena. This preparation ensures the data is accurate, reliable, and efficiently organized for downstream processing.
+7.**Data Structuring**: After cleaning, the Data Structuring phase organizes the data into a clear schema, renaming columns for clarity, reordering them logically, and ensuring consistency across datasets (e.g., Lost Animal Reports for 2023 and 2024). The structured data is stored in AWS S3’s Curated Zone and validated with AWS Glue, ready for analysis using tools like Amazon Athena. This preparation ensures the data is accurate, reliable, and efficiently organized for downstream processing.
 
 <img width="1440" alt="Data Structuring" src="https://github.com/user-attachments/assets/1d81dd2e-f7d1-4899-a365-3f8f3c85ba7f">
 
-8. **Data Analysis**: Data analysis is done using Amazon Athena, where SQL queries are executed to extract insights.
+8.**Data Analysis**: Data analysis is done using Amazon Athena, where SQL queries are executed to extract insights.
 
 **Example Query**:
 - sql
@@ -203,15 +203,15 @@ The dataset used in this project includes:
 
 <img width="1440" alt="Amazon Athena" src="https://github.com/user-attachments/assets/083e6fbc-733b-4e5a-9cd5-ff82047f4ef3">
 
-9. **Data Visualization**: The final analysis results are visualized using Google Sheets for clarity and ease of communication. Bar charts and other visual representations are created based on the analysis. The data visualizations are exported as PDF reports and shared with stakeholders.
+9.**Data Visualization**: The final analysis results are visualized using Google Sheets for clarity and ease of communication. Bar charts and other visual representations are created based on the analysis. The data visualizations are exported as PDF reports and shared with stakeholders.
 
 <img width="1440" alt="Screen Shot 2024-08-25 at 07 38 52" src="https://github.com/user-attachments/assets/0b7b8a7b-ac35-4cb3-906a-b804ee53b008">
 
-10. **Data Publishing**: The processed datasets and visualization reports are published using AWS EC2, allowing external stakeholders to access the reports securely. The EC2 instances were created to host the files and reports, making them accessible via public IPs.
+10.**Data Publishing**: The processed datasets and visualization reports are published using AWS EC2, allowing external stakeholders to access the reports securely. The EC2 instances were created to host the files and reports, making them accessible via public IPs.
 
 <img width="1440" alt="Screen Shot 2024-08-25 at 08 27 19" src="https://github.com/user-attachments/assets/952753a1-937f-4f50-9897-721d3b4bd8e3">
 
-11. **Data Governance and Security**: Ensuring the security and governance of data is critical. AWS KMS (Key Management Service) is used to encrypt datasets, and S3 bucket permissions are tightly controlled to prevent unauthorized access.
+11.**Data Governance and Security**: Ensuring the security and governance of data is critical. AWS KMS (Key Management Service) is used to encrypt datasets, and S3 bucket permissions are tightly controlled to prevent unauthorized access.
 - **SSE-KMS encryption** is applied to sensitive data.
 
 <img width="1440" alt="KMS - Key" src="https://github.com/user-attachments/assets/7d6423c2-e6af-45cf-8f41-cde320503cf2">
